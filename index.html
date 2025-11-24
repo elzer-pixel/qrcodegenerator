@@ -1,41 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>QR Code Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="wrapper">
-    <div class="container">
-      <h2>QR Code Generator</h2>
-      <p>Enter text, link, phone, or any data</p>
-
-      <input type="text" placeholder="Type something..." id="qrText">
-
-      <div id="imgBox">
-        <img id="qrImage" alt="QR Code">
-      </div>
-
-      <button onclick="generateQR()">Generate QR Code</button>
-
-      <div class="instructions">
-        <h3>How to Use</h3>
-        <ul>
-          <li>Enter any text, URL, phone number, or WiFi details.</li>
-          <li>Click the “Generate QR Code” button.</li>
-          <li>A QR code will appear below.</li>
-          <li>You can right-click and save the QR code image.</li>
-          <li>Scan the QR code using any smartphone camera.</li>
-        </ul>
-      </div>
+  <div class="container">
+    <p>Enter your Text or URL</p>
+    <input type="text" placeholder="Text or Url" id="qrText">
+    <div id="imgBox">
+      <img src="" alt="" id="qrImage">
     </div>
+    <button onclick="generateQR()" >Generate QR code</button>
   </div>
-
+  
   <script>
-      
+  
   let imgBox = document.getElementById("imgBox");
   let qrImage = document.getElementById("qrImage");
   let qrText = document.getElementById("qrText");
@@ -52,6 +34,6 @@
       }
     }
   </script>
-
+  
 </body>
 </html>
